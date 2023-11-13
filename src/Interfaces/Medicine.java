@@ -1,0 +1,15 @@
+package Interfaces;
+
+public interface Medicine {
+
+      //JIKA INGIN MENAMBAHKAN DUMMY, PASTIKAN OBAT ADA DI KOMPONEN PALING ATAS KETIKA DI-SEARCH
+    String LAPICEF = "LAPICEF 500 MG KAPSUL";
+    String ABILIFY_DISC = "ABILIFY DISCMELT 15MG TABLET";
+    String TONICARD = "TONICARD KAPSUL";
+    String ABILIFY = "ABILIFY 10 MG";
+    String IMBOOST = "IMBOOST TABLET";
+  
+    
+} 
+    
+
