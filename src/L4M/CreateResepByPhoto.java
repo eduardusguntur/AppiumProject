@@ -9,6 +9,7 @@ import Utils.LaunchHelper;
 import Utils.LoginHelper;
 import Utils.MainMenuHelper;
 import Utils.PopUpTNC;
+import Utils.SwipeHelper;
 import Utils.ManualPrescription.GetCityList;
 import Utils.PrescriptionByPhoto.GetPhoto;
 import io.appium.java_client.AppiumBy;
@@ -25,13 +26,13 @@ public class CreateResepByPhoto {
 
         PopUpTNC.popUpTNCBox(appiumDriver);
 
-        GetPhoto.takeMultiplePhotos(appiumDriver, 2);
+        GetPhoto.takeMultiplePhotos(appiumDriver, 3);
 
-        WebElement chooseFromLibrary = appiumDriver.findElement(AppiumBy.accessibilityId("Choose from Library..."));
-        chooseFromLibrary.click();
+        //WebElement chooseFromLibrary = appiumDriver.findElement(AppiumBy.accessibilityId("Choose from Library..."));
+        //chooseFromLibrary.click();
 
-        WebElement pickPhoto = appiumDriver.findElement(AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Photo taken on Nov 10, 2023, 1:33:01 PM\"]/androidx.cardview.widget.CardView/android.widget.FrameLayout/android.widget.ImageView"));
-        pickPhoto.click();
+        //WebElement pickPhoto = appiumDriver.findElement(AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Photo taken on Nov 10, 2023, 1:33:01 PM\"]/androidx.cardview.widget.CardView/android.widget.FrameLayout/android.widget.ImageView"));
+        //pickPhoto.click();
 
         WebElement buttonSelanjutnyaPilihPhoto = appiumDriver.findElement(AppiumBy.accessibilityId("Selanjutnya"));
         buttonSelanjutnyaPilihPhoto.click();
@@ -42,8 +43,8 @@ public class CreateResepByPhoto {
         AddPatient.getPatientData(appiumDriver, StringHelper.LIFEPACK);
         AddPatient.byPhoneNumber(appiumDriver, "085281915958", "Eduardus Guntur, Partner : PT. ITMI TESTING aja");
         
-        WebElement buttonSelanjutnyaDataPatient = appiumDriver.findElement(AppiumBy.accessibilityId("Selanjutnya"));
-        buttonSelanjutnyaDataPatient.click();
+        //WebElement buttonSelanjutnyaDataPatient = appiumDriver.findElement(AppiumBy.accessibilityId("Selanjutnya"));
+        //buttonSelanjutnyaDataPatient.click();
 
         //WebElement el5 = (WebElement) driver.findElementByAccessibilityId("Pilih Data Pasien, ");
         //el5.click();
@@ -59,7 +60,7 @@ public class CreateResepByPhoto {
         //WebElement el9 = (WebElement) driver.findElementByXPath("//android.view.ViewGroup[@content-desc=\"Jakarta Selatan\"]/android.view.ViewGroup");
         //el9.click();
 
-        
+        SwipeHelper.verticalSwipe(appiumDriver, "down");
 
         WebElement buttonSubmitDataPatient = appiumDriver.findElement(AppiumBy.accessibilityId("Submit"));
         buttonSubmitDataPatient.click();

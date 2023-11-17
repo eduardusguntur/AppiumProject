@@ -27,7 +27,7 @@ public class SwipeHelper {
         //Declare variable as Sequence to add action
         Sequence swipe = new Sequence(finger, 1);
 
-        //Swipe ke Atas "bottom"
+        //Swipe ke Atas from "bottom"
         if ("up".equalsIgnoreCase(swipeStart)) {
 
             //Move finger to starting position
@@ -41,7 +41,7 @@ public class SwipeHelper {
             
         }
 
-        //Swipe ke bawah "top"
+        //Swipe ke bawah from "top"
         if ("down".equalsIgnoreCase(swipeStart)) {
 
             //Move finger to starting position

@@ -16,7 +16,7 @@ public class GetPhoto {
         
         // Periksa apakah permission dialog ditampilkan
         if (isPermissionDialogVisible(appiumDriver)) {
-            WebElement allowPermissionPhoto = appiumDriver.findElement(AppiumBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button"));
+            WebElement allowPermissionPhoto = appiumDriver.findElement(AppiumBy.id("com.android.permissioncontroller:id/permission_allow_one_time_button"));
             allowPermissionPhoto.click();
     }
 
@@ -29,7 +29,7 @@ public class GetPhoto {
 
     private static boolean isPermissionDialogVisible(AppiumDriver appiumDriver) {
         try {
-            WebElement permissionDialog = appiumDriver.findElement(AppiumBy.id("com.android.permissioncontroller:id/permission_allow_foreground_only_button"));
+            WebElement e = appiumDriver.findElement(AppiumBy.id("com.android.permissioncontroller:id/permission_allow_one_time_button"));
             return true;
         } catch (NoSuchElementException e) {
             return false;

@@ -6,10 +6,10 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 
 public class MainMenuHelper {
-    public static void createPrescriptionByManual(AppiumDriver appiumDrivers) {
+    public static void createPrescriptionByManual(AppiumDriver appiumDriver) {
        
         //Buat Resep Obat
-        WebElement createPrescription = appiumDrivers.findElement(AppiumBy.accessibilityId("Buat Resep Obat, Input obat dan kirim ke pasien, "));
+        WebElement createPrescription = appiumDriver.findElement(AppiumBy.accessibilityId("Buat Resep Obat, Input obat dan kirim ke pasien, "));
         createPrescription.click();
 
     }

@@ -14,7 +14,7 @@ public class AddMedicineHelper {
         try {
             
             String[] meds = med.split(", ");
-            Integer totalMedicines = meds.length;
+            Integer totalMedicines = meds.length; 
 
             //untuk looping script tambah obat (lebih dari 1)
             for (int m = 0; m < totalMedicines; m++) {
@@ -39,6 +39,7 @@ public class AddMedicineHelper {
 
                 Thread.sleep(1000);
 
+                //pastikan obat paling atas
                 WebElement pickMedicine = appiumDriver.findElement(AppiumBy.xpath("(//android.view.ViewGroup[@content-desc=\"Pilih\"])[1]"));
                 pickMedicine.click();
 
