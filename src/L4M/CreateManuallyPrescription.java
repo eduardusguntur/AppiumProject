@@ -38,6 +38,9 @@ public class CreateManuallyPrescription {
 
         AddPatient.getPatientData(appiumDriver, StringHelper.LIFEPACK);
         AddPatient.byPhoneNumber(appiumDriver, "085281915958", "Eduardus Guntur, Partner : PT. ITMI TESTING aja");
+       
+        SwipeHelper.verticalSwipe(appiumDriver, "up");
+        
         AddPatient.submitPatientData(appiumDriver, StringHelper.YES_NEXT);
 
         DonePrescription.doneSubmitPrescription(appiumDriver, StringHelper.BACK_TO_HOME);
